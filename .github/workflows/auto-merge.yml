@@ -18,7 +18,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: development
-          head: ${{ github.ref }}
+          path: .
           title: 'feat: Merge feature branch into development'
           body: 'This PR merges the feature branch into the development branch.'
 
