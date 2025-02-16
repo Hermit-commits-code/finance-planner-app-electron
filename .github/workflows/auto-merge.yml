@@ -33,7 +33,6 @@ jobs:
         uses: actions/github-script@v4
         with:
           script: |
-            const { context, github } = require('@actions/github');
             const pr_number = context.payload.pull_request.number;
             await github.pulls.merge({
               owner: context.repo.owner,
