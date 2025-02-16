@@ -1,5 +1,3 @@
-import './index.css';
-
 import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 
 import App from './App.jsx';
