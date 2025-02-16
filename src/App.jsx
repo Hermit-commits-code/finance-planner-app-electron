@@ -9,6 +9,9 @@ function App() {
       <Link to="/auth">
         <button>Go to Auth</button>
       </Link>
+      <Link to="/dashboard">
+        <button>Go to Dashboard</button>
+      </Link>
     </div>
   );
 }
