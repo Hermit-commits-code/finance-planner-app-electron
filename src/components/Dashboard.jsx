@@ -1,3 +1,5 @@
+import './Dashboard.css'; // Import CSS file for styling
+
 import {
   BarElement,
   CategoryScale,
@@ -27,31 +29,51 @@ const Dashboard = () => {
   const balance = totalIncome - totalExpenses;
 
   const data = {
-    labels: ['Income', 'Expense', 'Balance'],
+    labels: ['Income', 'Expenses', 'Balance'],
     datasets: [
       {
         label: 'Finance Overview',
         data: [totalIncome, totalExpenses, balance],
-        backgroundColor: ['#4ca', '#f44', '#2196f3'],
+        backgroundColor: ['#4caf50', '#f44336', '#2196f3'],
       },
     ],
   };
+
   const options = {
     scales: {
       y: {
         beginAtZero: true,
       },
     },
+    plugins: {
+      tooltip: {
+        enabled: true,
+      },
+      legend: {
+        display: true,
+        position: 'top',
+      },
+    },
   };
+
   return (
-    <div>
+    <div className="dashboard">
       <h1>Dashboard</h1>
-      <div>
-        <h2>Total Income: ${totalIncome}</h2>
-        <h2>Total Expenses: ${totalExpenses}</h2>
-        <h2>Balance: ${balance}</h2>
+      <div className="financial-overview">
+        <div className="financial-metric">
+          <h2>Total Income</h2>
+          <p>${totalIncome}</p>
+        </div>
+        <div className="financial-metric">
+          <h2>Total Expenses</h2>
+          <p>${totalExpenses}</p>
+        </div>
+        <div className="financial-metric">
+          <h2>Balance</h2>
+          <p>${balance}</p>
+        </div>
       </div>
-      <div>
+      <div className="chart-container">
         <Bar data={data} options={options} />
       </div>
     </div>

@@ -1,0 +1,19 @@
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.financial-overview {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.financial-metric {
+  text-align: center;
+}
+
+.chart-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
