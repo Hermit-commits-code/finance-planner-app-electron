@@ -12,6 +12,9 @@ function App() {
       <Link to="/dashboard">
         <button>Go to Dashboard</button>
       </Link>
+      <Link to="/expenses">
+        <button>Go to Expenses</button>
+      </Link>
     </div>
   );
 }
