@@ -1,7 +1,7 @@
 import './Dashboard.css'; // Import CSS file for styling
 
-import { Bar, Line } from 'react-chartjs-2';
 import {
+  ArcElement,
   BarElement,
   CategoryScale,
   Chart as ChartJS,
@@ -12,6 +12,7 @@ import {
   Title,
   Tooltip,
 } from 'chart.js';
+import { Bar, Line, Pie } from 'react-chartjs-2';
 import {
   faBalanceScale,
   faDollarSign,
@@ -30,7 +31,8 @@ ChartJS.register(
   PointElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ArcElement
 );
 
 const Dashboard = () => {
@@ -64,6 +66,23 @@ const Dashboard = () => {
         label: 'Finance Overview',
         data: [totalIncome, totalExpenses, balance],
         backgroundColor: ['#4caf50', '#f44336', '#2196f3'],
+      },
+    ],
+  };
+
+  const pieData = {
+    labels: ['Rent', 'Groceries', 'Utilities', 'Entertainment', 'Others'],
+    datasets: [
+      {
+        label: 'Expense Categories',
+        data: [500, 300, 200, 100, 400],
+        backgroundColor: [
+          '#ff6384',
+          '#36a2eb',
+          '#ffce56',
+          '#4bc0c0',
+          '#9966ff',
+        ],
       },
     ],
   };
@@ -110,6 +129,9 @@ const Dashboard = () => {
       </div>
       <div className="chart-container">
         <Line data={monthlyData} options={options} />
+      </div>
+      <div className="chart-container">
+        <Pie data={pieData} options={options} />
       </div>
       <div className="navigation-links">
         <Link to="/expenses">Manage Expenses</Link>
