@@ -15,6 +15,15 @@ function App() {
       <Link to="/expenses">
         <button>Go to Expenses</button>
       </Link>
+      <Link to="/income">
+        <button>Update Income</button>
+      </Link>
+      <Link to="/reports">
+        <button>Generate Reports</button>
+      </Link>
+      <Link to="/settings">
+        <button>Settings</button>
+      </Link>
     </div>
   );
 }
