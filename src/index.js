@@ -9,6 +9,7 @@ import Expenses from './components/Expenses.jsx';
 import Income from './components/Income.jsx';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Reports from './components/Reports.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/expenses" element={<Expenses />} />
         <Route path="/income" element={<Income />} />
+        <Route path="/reports" element={<Reports />} />
       </Routes>
     </Router>
   </React.StrictMode>

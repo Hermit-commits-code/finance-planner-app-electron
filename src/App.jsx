@@ -18,6 +18,9 @@ function App() {
       <Link to="/income">
         <button>Update Income</button>
       </Link>
+      <Link to="/reports">
+        <button>Generate Reports</button>
+      </Link>
     </div>
   );
 }
