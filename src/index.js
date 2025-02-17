@@ -5,6 +5,7 @@ import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 import App from './App.jsx';
 import Auth from './components/Auth.jsx';
 import Dashboard from './components/Dashboard.jsx';
+import Income from './components/Income.jsx';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -16,6 +17,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/income" element={<Income />} />
       </Routes>
     </Router>
   </React.StrictMode>
