@@ -2,6 +2,8 @@ import './Expenses.css';
 
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 const Expenses = () => {
   const [expenses, setExpenses] = useState([]);
   const [description, setDescription] = useState('');
@@ -171,6 +173,9 @@ const Expenses = () => {
           ))}
         </tbody>
       </table>
+      <div className="navigation-links">
+        <Link to="/dashboard">Back to Dashboard</Link>
+      </div>
     </div>
   );
 };

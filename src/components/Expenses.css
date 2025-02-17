@@ -51,3 +51,22 @@ input[type='date'] {
 label {
   margin-right: 10px;
 }
+
+.navigation-links {
+  margin-top: 20px;
+}
+
+.navigation-links a {
+  text-decoration: none;
+  color: #2196f3;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation-links a:hover {
+  background-color: #2196f3;
+  color: #fff;
+}
