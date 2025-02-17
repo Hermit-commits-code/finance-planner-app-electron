@@ -21,6 +21,9 @@ function App() {
       <Link to="/reports">
         <button>Generate Reports</button>
       </Link>
+      <Link to="/settings">
+        <button>Settings</button>
+      </Link>
     </div>
   );
 }
